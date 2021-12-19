@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema(
         message: props => `${props.value} is not a valid password!`
         // required: true
       },
-  
+
     },
     isAdmin: {
       type: Boolean,
@@ -56,20 +56,11 @@ UserSchema.pre(
 
 
 
-UserSchema.methods = {
-  authenticate: function (password) {
-    const passwordHash = this.password
-    return new Promise((resolve, reject) => {
-
-      bcryptjs.compare(password, passwordHash, (err, same) => {
-        if (err) return reject(err);
-        resolve(same);
-      })
-    })
-  }
+UserSchema.methods.comparePassword = function (candidatePassword, cb) {
+  bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
+    if (err) return cb(err);
+    cb(null, isMatch);
+  });
 }
-
-
-
 
 export const User = mongoose.model("user", UserSchema)

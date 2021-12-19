@@ -1,13 +1,8 @@
-// import config from '../config'
+ import config from '../config/config.js'
 import { User } from '../resources/user/user.model.js'
-// import jwt from 'jsonwebtoken'
+ import jwt from 'jsonwebtoken'
 
-export const newToken = user => {
-  return jwt.sign({ id: user.id }, config.jwtSecret)
-  // return jwt.sign({ id: user.id }, config.jwtSecret, {
-  //   expiresIn: config.jwtExp
-  // })
-}
+export const generateAccessToken = user =>  jwt.sign({ _id: user._id }, config.jwtSecret)
 
 export const verifyToken = token =>
   new Promise((resolve, reject) => {
@@ -17,25 +12,25 @@ export const verifyToken = token =>
     })
   })
 
-export const signup = async (req, res) => {
-    const user = new User({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
+// export const signup = async (req, res) => {
+//     const user = new User({
+//         username: req.body.username,
+//         email: req.body.email,
+//         password: req.body.password
 
-    })
-    try{
-        const savedUser = await user.save()
-        res.status(201).json(savedUser)
-    }catch(err){
-        console.error(err)
-    }
+//     })
+//     try{
+//         const savedUser = await user.save()
+//         res.status(201).json(savedUser)
+//     }catch(err){
+//         console.error(err)
+//     }
     
-}
+// }
 
 export const signin = async (req, res) => {
-    const user = await User.findOne({ username: req.body.username })
-    !user && res.status(401).json("Wrong username")
+    const user = await User.findOne({ username: req.body.username } ,)
+    !user && res.status(401).json("User not found!")
 
     !(await user.authenticate(req.body.password) ) && res.status(401).json("Wrong password")
 

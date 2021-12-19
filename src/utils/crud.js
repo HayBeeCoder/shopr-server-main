@@ -88,7 +88,7 @@ export const getOneById = model => async (req, res, next, id) => {
   try {
     const foundModel = await model.findById(id)
     if (!foundModel) throw "Does not exist!"
-    console.log(foundModel)
+    // console.log(foundModel)
 
     req.profile = foundModel;
     next()
