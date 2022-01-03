@@ -39,28 +39,39 @@ const UserSchema = new mongoose.Schema(
 
 UserSchema.pre(
   'save',
-  function (next) {
+  async function (next) {
     if (!this.isModified('password')) {
       next()
     }
     if (this.password < 6) console.log("Entered password's length must not be less than 6.")
-    bcryptjs.hash(this.password, 8, (err, hash) => {
-      if (err) {
-        return next(err)
-      }
+    try {
+      const hashedPassword = await bcryptjs.hash(this.password, 8)
+      this.password = hashedPassword;
 
-      this.password = hash
-      next()
-    })
+    } catch (err) {
+      return next(err)
+    }
+
+    next()
   })
 
 
 
-UserSchema.methods.comparePassword = function (candidatePassword, cb) {
-  bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-    if (err) return cb(err);
-    cb(null, isMatch);
-  });
+UserSchema.methods = {
+  comparePassword: async function (candidatePassword) {
+    console.log('jasdfasdfhjklsdh')
+
+
+    // console.log(this.password)
+    // console.log(candidatePassword)
+    const comparison = await bcryptjs.compare( candidatePassword , this.password)
+    return comparison
+    // console.log(comparison)
+  }
+
 }
+
+
+
 
 export const User = mongoose.model("user", UserSchema)

@@ -21,7 +21,7 @@ export const createOne = model => async (req, res) => {
     doc.save((err, doc) => {
       if (err) throw err;
 
-      res.status(201).json({ message: `Successfully created ${doc.constructor.modelName}` })
+      res.status(201).json({ message: `Successfully created a ${doc.constructor.modelName}` })
     })
     // res.status(201).json({data: doc})
   } catch (err) {
