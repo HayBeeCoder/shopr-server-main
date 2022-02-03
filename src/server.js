@@ -28,6 +28,11 @@ app.use("/api/order", orderRouter)
 app.use("/api/cart", cartRouter)
 app.use("/api/product", productRouter)
 app.use("/auth", authRouter)
+app.get("/testing" , (req,res) => {
+    const {name , age} = req.query;
+    // res.send({name,age})
+    res.status(200).json({name,age})
+})
 
 //must be after routes have been mounted 
 //and before the export  statement

@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import errorHandler from "./dbErrorHandler.js"
+
 export const getOne = model => async (req, res) => {
   req.profile.password = undefined
   res.status(200).json({ data: req.profile })
@@ -7,7 +8,8 @@ export const getOne = model => async (req, res) => {
 
 export const getMany = model => async (req, res) => {
   try {
-    const doc = await model.find({}).select('email username')
+    // if(model ==  "User")
+    const doc = model.modelName == "user" ? await model.find({}).select('email username') : await model.find({})
     res.status(200).json({ data: doc })
   } catch (err) {
     res.status(500).json(err)
@@ -43,13 +45,13 @@ export const updateOne = model => async (req, res) => {
     // )
     // const modelProfile = req.profile
     // console.log(modelProfile)
-    const doc = _.extend(req.profile,req.body)
+    const doc = _.extend(req.profile, req.body)
     // console.log(doc)
     doc.save((err) => {
       if (err) throw err
       req.profile.password = undefined
-      console.log(doc)
-      res.status(200).json({ data: doc})
+      // console.log(doc)
+      res.status(200).json({ data: doc })
     })
 
 
@@ -68,7 +70,7 @@ export const removeOne = model => async (req, res) => {
       // const { password, ...response } = deletedModel
       doc.password = undefined
       // console.log(response)
-      res.status(200).json({message: `User ${doc.username} has been deleted sucessfully` })
+      res.status(200).json({ message: `User ${doc.username} has been deleted sucessfully` })
     })
   } catch (err) {
     res.status(500).json({ error: err })
@@ -85,8 +87,16 @@ export const removeOne = model => async (req, res) => {
 }
 
 export const getOneById = model => async (req, res, next, id) => {
+  let foundModel
   try {
-    const foundModel = await model.findById(id)
+    // console.log(model.modelName)
+     const foundModel = model.modelName == "cart" ? await model.findOne({ userId: id }) :  foundModel = await model.findById(id)
+    // if (model.modelName == "cart") {
+    //    foundModel = await model.findOne({ userId: id })
+    // } else {
+    //    foundModel = await model.findById(id)
+    // }
+    // const foundModel = await model.findOne({userId: id}) 
     if (!foundModel) throw "Does not exist!"
     // console.log(foundModel)
 
