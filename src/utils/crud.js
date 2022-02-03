@@ -90,7 +90,7 @@ export const getOneById = model => async (req, res, next, id) => {
   let foundModel
   try {
     // console.log(model.modelName)
-     const foundModel = model.modelName == "cart" ? await model.findOne({ userId: id }) :  foundModel = await model.findById(id)
+      foundModel = model.modelName == "cart" ? await model.findOne({ userId: id }) :  await model.findById(id)
     // if (model.modelName == "cart") {
     //    foundModel = await model.findOne({ userId: id })
     // } else {
