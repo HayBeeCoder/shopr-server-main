@@ -17,10 +17,10 @@ export const getMany = model => async (req, res) => {
 }
 
 export const createOne = model => async (req, res) => {
-  if(model.modelName == "Product"){
-    const { title ,desc,images,price} = req.body
-    const data = { title,desc,images,price}
-  }
+  // if(model.modelName == "Product"){
+  //   const { title ,desc,images,price} = req.body
+  //   const data = { title,desc,images,price}
+  // }
  
 
   try {
