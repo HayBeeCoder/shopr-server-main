@@ -13,10 +13,13 @@ const ProductSchema = new mongoose.Schema(
                 trim: true
             },
             images: [{
-                type: String,
-                 required: true
+                color: String,
+                imgs: [{
+                    type: String,
+                    required: true
+                }]
             }],
-            size: Array,
+            size: [{size: String,quantity: Number}],
             categories: Array,
             color: String,
             price: {
@@ -32,5 +35,7 @@ const ProductSchema = new mongoose.Schema(
     },
 
 )
+
+
 
 export const Product = mongoose.model("product" , ProductSchema)

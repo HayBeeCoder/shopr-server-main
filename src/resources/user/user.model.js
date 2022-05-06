@@ -2,11 +2,6 @@ import mongoose from "mongoose";
 import bcryptjs from "bcryptjs";
 const UserSchema = new mongoose.Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true
-    },
     email: {
       type: String,
       trim: true,
@@ -15,6 +10,11 @@ const UserSchema = new mongoose.Schema(
       required: true,
       // unique : true,
       // trim: true
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true
     },
     password: {
       type: String,
@@ -59,12 +59,13 @@ UserSchema.pre(
 
 UserSchema.methods = {
   comparePassword: async function (candidatePassword) {
-    console.log('jasdfasdfhjklsdh')
+
 
 
     // console.log(this.password)
     // console.log(candidatePassword)
     const comparison = await bcryptjs.compare( candidatePassword , this.password)
+  
     return comparison
     // console.log(comparison)
   }

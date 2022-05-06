@@ -7,10 +7,17 @@ import config from '../config/config.js'
 const signin = async (req, res, next) => {
     // const { password, username } = req.body
     try {
-
+console.log(req.body)
         const user = await User.findOne({ username: req.body.username })
-       if (!user ) throw new Error ("Wrong username or password.");
-        const token = generateAccessToken(user)
+ 
+        if(!user ) throw "Wrong password or username was entered!"
+        // console.log(user)
+        const validPassword = await user.comparePassword(req.body.password)
+  
+        if(!validPassword)
+                throw "Wrong Password was entered bro!"
+                
+         const token = generateAccessToken(user)
  
         res.cookie("remember_me", token, {
             maxAge: 86400
@@ -22,7 +29,8 @@ const signin = async (req, res, next) => {
             // user: { ...user._doc }
             user: {_id: user._id, name: user.name, email: user.email}
         })
-    } catch (err) {
+    }
+     catch (err) {
         res.status(400).json({ err })
     }
 }

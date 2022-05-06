@@ -10,18 +10,20 @@ const OrderSchema = new mongoose.Schema(
                 productId: String,
                 quantity: {
                     type: Number,
+                    required: true,
+                    min: [1, 'Quantity can not be less then 1.'],     
                     default: 1 
                 }
             }
         ],    
-        amount: {
+        bill: {
             type: Number,
             required: true
         },
-        address: {
-            type: Object, 
-            required: true
-        },
+        // address: {
+        //     type: Object, 
+        //     required: true
+        // },
         status: {
             type: String,
             default: "pending"
