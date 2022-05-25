@@ -4,24 +4,26 @@ const ProductSchema = new mongoose.Schema(
             title: {
                 type: String,
                 required: true,
-                unique: true,
+                // unique: true,
                 trim: true
             },
-            desc: {
+            // subtitle: {
+            //     type: String,
+            //     required: true
+            // },
+            description: {
                 type: String,
                 required: true,
                 trim: true
             },
-            images: [{
-                color: String,
-                imgs: [{
+            images: [ [{
                     type: String,
                     required: true
                 }]
-            }],
+            ],
             size: [{size: String,quantity: Number}],
             categories: Array,
-            color: String,
+            color: [ {type: String} ],
             price: {
                 type: Number,
                 required: true

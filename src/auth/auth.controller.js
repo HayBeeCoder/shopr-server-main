@@ -7,16 +7,14 @@ import config from '../config/config.js'
 const signin = async (req, res, next) => {
     // const { password, username } = req.body
     try {
-console.log(req.body)
         const user = await User.findOne({ username: req.body.username })
  
         if(!user ) throw "Wrong password or username was entered!"
-        // console.log(user)
         const validPassword = await user.comparePassword(req.body.password)
   
         if(!validPassword)
                 throw "Wrong Password was entered bro!"
-                
+
          const token = generateAccessToken(user)
  
         res.cookie("remember_me", token, {
