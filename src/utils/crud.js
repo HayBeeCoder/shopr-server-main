@@ -7,9 +7,32 @@ export const getOne = model => async (req, res) => {
 }
 
 export const getMany = model => async (req, res) => {
+  let doc
+  const { modelName } = model
+  if (modelName == "user") {
+    doc = await model.find({}).select('email username')
+  } else if (modelName == "product") {
+    if (req.query) {
+      const { query } = req
+      if (query.new) {
+        console.log('hi')
+        doc = await model.find({}).limit(8)
+      } else doc = await model.find({})
+    }
+  } else {
+    doc = await model.find({})
+  }
+
+  console.log("isProduct: ", "product" == model.modelName)
+  console.log(req.query)
+
+
+
+
+
   try {
     // if(model ==  "User")
-    const doc = model.modelName == "user" ? await model.find({}).select('email username') : await model.find({})
+    // const doc = model.modelName == "user" ? await model.find({}).select('email username') : await model.find({})
     res.status(200).json({ data: doc })
   } catch (err) {
     res.status(500).json(err)
@@ -25,7 +48,7 @@ export const createOne = model => async (req, res) => {
 
   try {
     const doc = await model.create(req.body)
-    console.log(doc)
+    // console.log(doc)
     // console.log(doc)
     doc.save((err, doc) => {
       if (err) throw err;
@@ -97,7 +120,7 @@ export const getOneById = model => async (req, res, next, id) => {
   let foundModel
   try {
     // console.log(model.modelName)
-      foundModel = model.modelName == "cart" ? await model.findOne({ userId: id }) :  await model.findById(id)
+    foundModel = model.modelName == "cart" ? await model.findOne({ userId: id }) : await model.findById(id)
     // if (model.modelName == "cart") {
     //    foundModel = await model.findOne({ userId: id })
     // } else {
