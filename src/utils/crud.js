@@ -15,8 +15,9 @@ export const getMany = model => async (req, res) => {
     if (req.query) {
       const { query } = req
       if (query.new) {
-        console.log('hi')
+        // console.log('hi')
         doc = await model.find({}).limit(8)
+        doc[4] = ''
       } else doc = await model.find({})
     }
   } else {
