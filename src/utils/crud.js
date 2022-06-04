@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import { unstable_HistoryRouter } from 'react-router-dom'
 import errorHandler from "./dbErrorHandler.js"
 
 export const getOne = model => async (req, res) => {
@@ -19,7 +20,8 @@ export const getMany = model => async (req, res) => {
         doc = await model.find({}).limit(8)
      
       } else if(query.category) {
-        doc = await model.find({category: [query.category]})
+        console.log(query.category)
+        doc = await model.find({category: query.category})
       }else doc = await model.find({})
     }
   } else {
