@@ -42,7 +42,7 @@ const womenproducts = [
             }
 
         ],
-        "category": ["women", "denim"],
+        "category": ["women", "denims"],
         "color": ["#35465E", "#8BA6C1"],
         "price": 90
 
@@ -427,10 +427,8 @@ const womenproducts = [
         "color": ["#332F21", "#cccb5b5"],
         "price": 46
 
-    },
-
-    // =============================
-    <{
+    }, 
+    {
         "title": "The Slim Fit Jeans",
         "description": "The Slim Fit Jean is made of premium, midweight denim that feels substantial but has a touch of stretch for comfort.",
         "images": [[
@@ -471,10 +469,13 @@ const womenproducts = [
         "color": ["#4f7ca4", "#343434"],
         "price": 40
 
-    }>,
+    },
+
+
+    // =====================
     {
         "title": "The Skinny 4-Way Stretch Organic Jean ",
-        "description": "The Slim Fit Jean is made of premium, midweight denim that feels substantial but has a touch of stretch for comfort.",
+        "description": "The Skinny 4-Way Stretch Jean is made of premium, midweight denim that feels substantial but has a touch of stretch for comfort.",
         "images": [[
             "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/c339cba5_81db",
             "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/ded149d5_a562",
@@ -564,7 +565,7 @@ const womenproducts = [
         "color": ["#464646", , "#1b365d"],
         "price": 40
 
-    },
+    },   
     {
         "title": "The Grade-A Cashmere Crew",
         "description": "This timeless style gets a luxe upgrade with the soft and lightweight warmth of cashmere. All cashmere fibers are hollow and made to trap warmth",
@@ -611,7 +612,6 @@ const womenproducts = [
         "price": 45
 
     },
-
     {
         "title": "The Track Quarter-Zip Sweatshirt",
         "description": "The Track Quarter-Zip Sweatshirt switches up the quarter-zip game with a shirt collar, a silver metal zipper, and a clean flat hem.",
@@ -658,8 +658,6 @@ const womenproducts = [
         "price": 45
 
     },
-
-
     {
         "title": "The Felted Merino Half-Zip Sweater",
         "description": "The Felted Merino Half-Zip Sweater takes a classic silhouette and elevates it, boasting a handsome but low-key knit pattern and finishing stitches.",
@@ -706,7 +704,7 @@ const womenproducts = [
         "color": ["#1c1c1c", "#aa6f47"],
         "price": 45
 
-    },
+    },  
     {
         "title": "The Long-Sleeve Summer Shirt",
         "description": "The Long-Sleeve Summer Shirt is built to stay cool, thanks to its lightweight construction and double-gauze material. Plus, it’s made of 100% organic cotton for superior breathability and undeniable softness. TBH, it’s the only way to stay summer-ready.",
@@ -748,52 +746,6 @@ const womenproducts = [
         "category": ["men", "shirts"],
         "color": ["#656060", "#aa6f47"],
         "price": 45
-
-    },
-
-
-
-    {
-        "title": "The Long-Sleeve Summer Shirt",
-        "description": "The Long-Sleeve Summer Shirt is built to stay cool, thanks to its lightweight construction and double-gauze material. Plus, it’s made of 100% organic cotton for superior breathability and undeniable softness. TBH, it’s the only way to stay summer-ready.",
-        "images": [[
-            "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/ebcf87bf_2bab",
-            "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/32bd064a_244c",
-            "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/de529c02_5789",
-            "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/dd1d6ab8_0435"
-
-        ],
-        [
-            "https://media.everlane.com/image/upload/c_fill,w_1080,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/1972d1ce_4ecb",
-
-        ]
-        ],
-        "size": [
-            {
-                "size": "XS",
-                "quantity": 21
-            },
-            {
-                "size": "S",
-                "quantity": 2
-            },
-            {
-                "size": "M",
-                "quantity": 10
-            },
-            {
-                "size": "L",
-                "quantity": 2
-            },
-            {
-                "size": "XL",
-                "quantity": 4
-            }
-
-        ],
-        "category": ["men", "shirts"],
-        "color": ["#656060", "#B0B7BE"],
-        "price": 70
 
     },
     {
@@ -841,7 +793,7 @@ const womenproducts = [
         "color": ["#cdd7e3", "#fff"],
         "price": 80
 
-    },
+    }, 
     {
         "title": "The Seersucker Short-Sleeve Shirt",
         "description": "The Seersucker Short-Sleeve Shirt",
@@ -935,7 +887,7 @@ const womenproducts = [
 
     },
     {
-        "title": "The Performance Traveller Chinos",
+        "title": "The Performance 5-Pocket Pant",
         "description": "The Performance 5-Pocket Pant offers smart casual style and the added comfort of 4-way stretch, sweat-wicking, and quick-drying fabric.",
         "images": [[
             "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/ab0e7172_bda6",
@@ -980,6 +932,7 @@ const womenproducts = [
         "price": 65
 
     },
+
     {
         "title": "The Everyone Sweatpant",
         "description": "The Everyone Sweatpant features astronomical amounts of comfort in its no-fuss design with a loose top block and tapered ankles for an effortlessly dressed down look.",
@@ -1025,7 +978,7 @@ const womenproducts = [
         "color": ["#6B4331", "#1c1c1c"],
         "price": 65
 
-    },
+    }, 
     {
         "title": "The Sport Jogger",
         "description": "",
@@ -1064,7 +1017,6 @@ const womenproducts = [
         "price": 75
 
     },
-
     {
         "title": "The Track Pant",
         "description": "Featuring an elastic waistband with a hidden drawcord, two side pockets, a back patch pocket, and a relaxed tapered leg, the Track Pant has a signature look that will stand the test of time..",

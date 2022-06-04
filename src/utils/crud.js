@@ -18,14 +18,16 @@ export const getMany = model => async (req, res) => {
         // console.log('hi')
         doc = await model.find({}).limit(8)
      
-      } else doc = await model.find({})
+      } else if(query.category) {
+        doc = await model.find({category: [query.category]})
+      }else doc = await model.find({})
     }
   } else {
     doc = await model.find({})
   }
 
-  console.log("isProduct: ", "product" == model.modelName)
-  console.log(req.query)
+  // console.log("isProduct: ", "product" == model.modelName)
+  // console.log(req.query)
 
 
 
