@@ -1,5 +1,4 @@
-import _ from 'lodash'
-import { unstable_HistoryRouter } from 'react-router-dom'
+
 import errorHandler from "./dbErrorHandler.js"
 
 export const getOne = model => async (req, res) => {
