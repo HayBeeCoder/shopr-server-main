@@ -13,6 +13,7 @@ import compress from 'compression'
 import config from './config/config.js'
 import authRouter from './auth/auth.router.js'
 import { db_connect } from './utils/db.js'
+import Stripe from 'stripe'
 
 export const app = express()
 
@@ -40,6 +41,28 @@ app.get("/testing" , (req,res) => {
     // res.send({name,age})
     res.status(200).json({name,age})
 })
+
+
+
+
+//stripe payment intent
+app.post("/create-payment-intent", async (req, res) => {
+    const { items } = req.body;
+  
+    // Create a PaymentIntent with the order amount and currency
+    const paymentIntent = await Stripe.paymentIntents.create({
+      amount: parseInt(items),
+      currency: "eur",
+      automatic_payment_methods: {
+        enabled: true,
+      },
+    });
+    console.log("Tottal value form the client end is : " , parseInt(items))
+    res.send({
+      clientSecret: paymentIntent.client_secret,
+    });
+  });
+  
 
 //must be after routes have been mounted 
 //and before the export  statement
