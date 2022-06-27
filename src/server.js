@@ -1,4 +1,6 @@
 import express from 'express'
+import dotenv from 'dotenv';
+dotenv.config()
 import userRouter from './resources/user/user.router.js'
 import orderRouter from './resources/order/order.router.js'
 import productRouter from './resources/product/product.router.js'
@@ -13,7 +15,10 @@ import compress from 'compression'
 import config from './config/config.js'
 import authRouter from './auth/auth.router.js'
 import { db_connect } from './utils/db.js'
-import Stripe from 'stripe'
+import Stripe from 'stripe' 
+
+const stripe = Stripe(process.env.STRIPE_API_KEY);
+
 
 export const app = express()
 
@@ -46,20 +51,22 @@ app.get("/testing" , (req,res) => {
 
 
 //stripe payment intent
-app.post("/create-payment-intent", async (req, res) => {
-    const items = req.body;
+app.post("/api/create-payment-intent", async (req, res) => {
+    const { total } = req.body;
+    console.log(await stripe.paymentIntents)
   
     // Create a PaymentIntent with the order amount and currency
-    const paymentIntent = await Stripe.paymentIntents.create({
-      amount: parseInt(items),
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: parseInt(total),
       currency: "eur",
       automatic_payment_methods: {
         enabled: true,
       },
     });
-    console.log("Tottal value form the client end is : " , parseInt(items))
-    res.send({
-      clientSecret: paymentIntent.client_secret,
+    console.log(paymentIntent)
+    console.log("Tottal value form the client end is : " , parseInt(total))
+    res.json({
+      clientSecret: paymentIntent?.client_secret,
     });
   });
   
