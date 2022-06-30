@@ -40,7 +40,7 @@ app.use("/api/users", userRouter)
 app.use("/api/order", orderRouter)
 app.use("/api/cart", cartRouter)
 app.use("/api/product",  productRouter)
-app.use("/auth", authRouter)
+app.use("/api/auth", authRouter)
 app.get("/testing" , (req,res) => {
     const {name , age} = req.query;
     // res.send({name,age})
