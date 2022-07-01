@@ -427,7 +427,7 @@ const womenproducts = [
         "color": ["#332F21", "#cccb5b5"],
         "price": 46
 
-    }, 
+    },
     {
         "title": "The Slim Fit Jeans",
         "description": "The Slim Fit Jean is made of premium, midweight denim that feels substantial but has a touch of stretch for comfort.",
@@ -565,7 +565,7 @@ const womenproducts = [
         "color": ["#464646", , "#1b365d"],
         "price": 40
 
-    },   
+    },
     {
         "title": "The Grade-A Cashmere Crew",
         "description": "This timeless style gets a luxe upgrade with the soft and lightweight warmth of cashmere. All cashmere fibers are hollow and made to trap warmth",
@@ -704,7 +704,7 @@ const womenproducts = [
         "color": ["#1c1c1c", "#aa6f47"],
         "price": 45
 
-    },  
+    },
     {
         "title": "The Long-Sleeve Summer Shirt",
         "description": "The Long-Sleeve Summer Shirt is built to stay cool, thanks to its lightweight construction and double-gauze material. Plus, it’s made of 100% organic cotton for superior breathability and undeniable softness. TBH, it’s the only way to stay summer-ready.",
@@ -793,7 +793,7 @@ const womenproducts = [
         "color": ["#cdd7e3", "#fff"],
         "price": 80
 
-    }, 
+    },
     {
         "title": "The Seersucker Short-Sleeve Shirt",
         "description": "The Seersucker Short-Sleeve Shirt",
@@ -978,7 +978,7 @@ const womenproducts = [
         "color": ["#6B4331", "#1c1c1c"],
         "price": 65
 
-    }, 
+    },
     {
         "title": "The Sport Jogger",
         "description": "",
@@ -1033,8 +1033,8 @@ const womenproducts = [
             "https://media.everlane.com/image/upload/c_fill,dpr_2,f_auto,g_face:center,q_auto,w_auto/v1/i/a50c7684_c15c.jpg",
             "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/63d86664_7f22"
         ]
-    
-    ],
+
+        ],
         "size": [
             {
                 "size": "XS",
@@ -1059,9 +1059,108 @@ const womenproducts = [
 
         ],
         "category": ["men", "pants"],
-        "color": ["#4A638D","#656060"],
+        "color": ["#4A638D", "#656060"],
         "price": 85
 
     },
+
+
+
+
+
+
+
+
+
+
+    // 01/07/2022 
+    {
+        title: "The Tiered Midi Dress",
+        description: "The Tiered Midi Dress has an elegant, soft, put-together kind of polish that’s ideal for warmer days. Made of 100% organic cotton and woven to perfection, it’s the ultimate staple to add to your on-the-move daily rotation.",
+        images: [
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/806490a7_3876",
+                "https://media.everlane.com/image/upload/c_fill,w_1080,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/fa9264ae_a2dc",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/4262e3a5_15a5",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/07a673ea_a502",
+            ],
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/f42d677b_6f40",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/3dfe7b21_5f24",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/3d856fb6_c7a1",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/b56bcafb_fc36"
+
+
+            ]
+        ],
+        size: [
+            {
+                "size": "XS",
+                "quantity": 5
+            },
+            {
+                "size": "S",
+                "quantity": 6
+            },
+            {
+                "size": "M",
+                "quantity": 10
+            },
+            {
+                "size": "L",
+                "quantity": 7
+            },
+            {
+                "size": "XL",
+                "quantity": 8
+            }
+        ],
+        color: ["#997AA3", "#9DA34F"],
+        price: 100,
+        category: ["women", "dresses"]
+    },
+
+
+    {
+        "title": "The Fatigue Apron Jumpsuit",
+        "description": "The Fatigue Apron Jumpsuit is made of 94% organic cotton with a hint of linen for all-around comfort and maximum breathability.",
+        "images": [
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/9a0edb16_f862",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/a230c643_d8e9",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/864feb61_93a9",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/cdf8118e_beaf"
+            ]
+        ],
+        "size": [
+            {
+                "size": "XS",
+                "quantity": 2
+            },
+            {
+                "size": "S",
+                "quantity": 3
+            },
+            {
+                "size": "M",
+                "quantity": 7
+            },
+            {
+                "size": "L",
+                "quantity": 6
+            },
+            {
+                "size": "XL",
+                "quantity": 4
+            }
+        ],
+        "price": 85,
+        "color": ["#fefefe"],
+        "category": ["women" , "dresses"]
+
+
+
+    }
+
 
 ]

@@ -17,7 +17,8 @@ export const getMany = model => async (req, res) => {
       const { query } = req
       if (query.new) {
         // console.log('hi')
-        doc = await model.find({}).limit(8)
+        // doc = await model.find({}).limit(8)
+        doc = await model.find({ sort: { 'created_at' : -1 }}).limit(8)
      
       } else if(query.category) {
         // console.log(query.category)
