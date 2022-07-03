@@ -9,7 +9,7 @@ export const getOne = model => async (req, res) => {
 export const getMany = model => async (req, res) => {
   let doc
   const { modelName } = model
-  console.log(modelName)
+  // console.log(modelName)
   if (modelName == "user") {
     doc = await model.find({}).select('email username')
   } else if (modelName == "product") {
@@ -18,7 +18,7 @@ export const getMany = model => async (req, res) => {
       if (query.new) {
         // console.log('hi')
         // doc = await model.find({}).limit(8)
-        doc = await model.find({ sort: { 'created_at' : -1 }}).limit(8)
+        doc = await model.find().sort({created_at: -1}).limit(8)
      
       } else if(query.category) {
         // console.log(query.category)

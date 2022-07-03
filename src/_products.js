@@ -1160,7 +1160,113 @@ const womenproducts = [
 
 
 
-    }
+    },
 
+    // shoes 
+
+    {
+        "title": "The Italian Leather Day Heel",
+        "description": "All. Damn. Day. The Day Heel’s ballet-inspired silhouette is designed with a rounded toe, a walkable two-inch block heel, and an elasticized back for extra comfort.",
+        "images": [
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/eb06a0f5_178b",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/61ed49bd_2f8f",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/868571af_5f88",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/5e9cc3e7_7d1f"
+            ],
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/5a004044_383a",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/b5cd8864_47b4",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/1d21edf3_3dff",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/b2cff9fd_e877"
+
+            ],
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/1c2078ff_96cd",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/9f8e6a48_fd43",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/e4e2c4ce_e15c",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/0681431c_a206"
+                
+            ]
+        ],
+        "color": ["#f2f0e3", "#000" , "#D8BDAA" ],
+        "price": 28,
+        "size": [
+            {
+                "size": "XS",
+                "quantity": 1
+            },
+            {
+                "size": "S",
+                "quantity": 2
+            },
+            {
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "size": "L",
+                "quantity": 5
+            },
+            {
+                "size": "XL",
+                "quantity": 4
+            }
+        ],
+        "category": ["women","shoes"]
+
+    },
+
+
+
+    {
+        "title": "The desert Shoe",
+        "description": "The Desert Shoe—classed-up looks and sneaker-level comfort.",
+        "images": [
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/99f9980b_9865",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/c17cb003_a016",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/44a82857_08fd",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/d6474c40_c9cc"
+            ],
+            [
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/0326918a_209a",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/1a88466d_8e3a",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/78f7f377_da00",
+                "https://media.everlane.com/image/upload/c_fill,w_384,ar_1:1,q_auto,dpr_1.0,g_face:center,f_auto,fl_progressive:steep/i/8b24d596_1aa4"
+            ]
+           
+
+        ],
+        "color": ["#E5D0A6" , "#94562A" , " ", " "],
+        "category": ["men" , "shoes"],
+        "price": 99,
+        "size": [
+            {
+                "size": "XS",
+                "quantity": 1
+            },
+            {
+                "size": "S",
+                "quantity": 2
+            },
+            {
+                "size": "M",
+                "quantity": 4
+            },
+            {
+                "size": "L",
+                "quantity": 5
+            },
+            {
+                "size": "XL",
+                "quantity": 4
+            }
+        ]
+
+
+
+    }
+    
 
 ]
