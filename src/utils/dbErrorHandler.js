@@ -19,15 +19,19 @@ const getErrMsg = (err) => {
 }
 
 const getUniqueErrMsg = (err) => {
-    let output , e = err.message
-    const l = (err,string) => err.lastIndexOf(string)
-
+    let output, e = err.message
+    const l = (err, string) => err.lastIndexOf(string)
+    // console.log(e.lastIndexOf("_1"))
+    // console.log(e.lastIndexOf("index:"))
+    // console.log(e)
     try {
         let fieldName =
-            e.message.substring(l(e,'.$') + 2,l(e,'_1'))
+            e.substring(l(e, 'index:') + 7, l(e, '_1'))
+        console.log(fieldName)
         output = fieldName.charAt(0).toUpperCase() + fieldName.slice(1) +
             ' already exists'
-    } catch (er) {
+    }
+    catch (er) {
         output = 'Unique field already exists'
     }
     return output
