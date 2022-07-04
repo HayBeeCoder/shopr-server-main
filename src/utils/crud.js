@@ -48,16 +48,17 @@ export const createOne = model => async (req, res) => {
   //   const { title ,desc,images,price} = req.body
   //   const data = { title,desc,images,price}
   // }
-
+// const {modelName} = model
 
   try {
     const doc = await model.create(req.body)
     // console.log(doc)
     // console.log(doc)
+    
     doc.save((err, doc) => {
       if (err) throw err;
 
-      res.status(201).json({ message: `Successfully created a ${doc.constructor.modelName}` })
+      res.status(201).json({ data: doc })
     })
     // res.status(201).json({data: doc})
   } catch (err) {

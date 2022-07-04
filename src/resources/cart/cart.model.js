@@ -18,11 +18,7 @@ const CartSchema = new mongoose.Schema(
                  price: Number
              }
          ], 
-         bill: {
-            type: Number,
-            required: true,
-            default: 0
-        }   
+        
     },
 
 )
