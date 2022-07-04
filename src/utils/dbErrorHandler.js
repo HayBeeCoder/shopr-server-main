@@ -27,7 +27,7 @@ const getUniqueErrMsg = (err) => {
             e.message.substring(l(e,'.$') + 2,l(e,'_1'))
         output = fieldName.charAt(0).toUpperCase() + fieldName.slice(1) +
             ' already exists'
-    } catch (err) {
+    } catch (er) {
         output = 'Unique field already exists'
     }
     return output
