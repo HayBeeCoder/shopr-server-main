@@ -27,6 +27,7 @@ export const app = express()
 
 
 app.use(express.json())
+app.options("/" ,cors({'Access-Control-Allow-Origin': "*"}))
 app.use(cors())
 app.use(helmet())
 app.use(bodyParser.json())
