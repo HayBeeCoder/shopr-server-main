@@ -79,7 +79,7 @@ export const updateOne = model => async (req, res) => {
   )
 
    console.log(doc)
-res.status(500).json({data: doc})
+res.status(200).json({data: doc})
 console.log("res: ", res)
 
   } catch (err) {
