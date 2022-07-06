@@ -27,8 +27,14 @@ export const app = express()
 
 
 app.use(express.json())
-app.options("/" ,cors({'Access-Control-Allow-Origin': "*"}))
-app.use(cors())
+// app.options("/" ,cors({'Access-Control-Allow-Origin': "*"}))
+// app.use(cors())
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 app.use(helmet())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
