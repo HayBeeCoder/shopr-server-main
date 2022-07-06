@@ -49,13 +49,21 @@ const require_signin = jwt({
 })
 
 const is_authorized = (req, res, next) => {
-    const authorized = req.profile && req.auth && req.profile._id ==
-        req.auth._id
+
+    console.log(req.body.auth._id)
+    console.log(req.profile._id.toString())
+
+    console.log( req.profile._id.toString() == req.body.auth._id) 
+    const authorized = req.profile && req.body.auth && req.profile._id.toString() ==
+        req.body.auth._id
     if (!(authorized)) {
         return res.status('403').json({
             error: "User is not authorized"
         })
     }
+    console.log(req.body)
+    let a = req.body.data
+    req.body = a
     next()
 }
 export default {

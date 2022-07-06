@@ -69,26 +69,17 @@ export const createOne = model => async (req, res) => {
 }
 
 export const updateOne = model => async (req, res) => {
+  // console.log(req.params.userId)
   try {
-    // const doc = await model.findOneandUpdate(
-    //   req.params.id,
-    //    req.body
-    // ,
-    //   {
-    //     new: true
-    //   }
-    // )
-    // const modelProfile = req.profile
-    // console.log(modelProfile)
-    const doc = _.extend(req.profile, req.body)
-    // console.log(doc)
-    doc.save((err) => {
-      if (err) throw err
-      req.profile.password = undefined
-      // console.log(doc)
-      res.status(200).json({ data: doc })
-    })
+  const doc = await model.findOneAndUpdate({
+    userId: req.params.userId
+  },
+  req.body,
+  {new: true}
+  )
 
+  // console.log(doc)
+res.status(500).json({data: doc})
 
   } catch (err) {
     res.status(500).json({ err })

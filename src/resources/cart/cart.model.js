@@ -3,7 +3,7 @@ const CartSchema = new mongoose.Schema(
     {
          userId: {
              type: String,
-             required: true
+            //  required: true
          },
        
          products: [
@@ -15,7 +15,11 @@ const CartSchema = new mongoose.Schema(
                      min: [1, 'Quantity can not be less then 1.'],     
                      default: 1 
                  },
-                 price: Number
+                 price: Number,
+                 image: String,
+                 name:String,
+                 color: String,
+                 size: Number,
              }
          ], 
         

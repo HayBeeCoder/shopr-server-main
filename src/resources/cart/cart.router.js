@@ -14,8 +14,7 @@ router
 
 router
     .route('/:userId')
-    //  .get(authController.require_signin, controllers.getOne)
-    .get(controllers.getOne)
+     .get(controllers.getOne)
      .put(authController.require_signin, authController.is_authorized, controllers.updateOne)
     // .put( controllers.updateOne)
     .delete(authController.require_signin, authController.is_authorized, controllers.deleteOne)
