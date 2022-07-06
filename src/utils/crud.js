@@ -79,7 +79,7 @@ export const updateOne = model => async (req, res) => {
   )
 
   // console.log(doc)
-res.status(500).json({data: doc})
+res.headers.add('Access-Control-Allow-Origin', '*').status(500).json({data: doc})
 
   } catch (err) {
     res.status(500).json({ err })
