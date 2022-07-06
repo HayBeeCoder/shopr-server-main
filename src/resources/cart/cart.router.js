@@ -5,11 +5,11 @@ import authController from "../../auth/auth.controller.js"
 const router = Router()
 router
     .route("/")
-    .get((req, res) => {;
-        res.status(200).json({ cart: "Successful connection to cart in database" })
-        // console.log("Get request to cart successful")
+    // .get((req, res) => {;
+    //     res.status(200).json({ cart: "Successful connection to cart in database" })
+    //     // console.log("Get request to cart successful")
 
-    })
+    // })
     .post(controllers.createOne)
 
 router
