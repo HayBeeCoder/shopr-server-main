@@ -70,6 +70,7 @@ export const createOne = model => async (req, res) => {
 
 export const updateOne = model => async (req, res) => {
   // console.log(req.params.userId)
+  console.log('jhhkhbj')
   try {
   const doc = await model.findOneAndUpdate({
     userId: req.params.userId
@@ -88,6 +89,7 @@ console.log("res: ", res)
 }
 
 export const removeOne = model => async (req, res) => {
+  
   try {
 
     const doc = req.profile;

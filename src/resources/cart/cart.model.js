@@ -19,7 +19,7 @@ const CartSchema = new mongoose.Schema(
                  image: String,
                  name:String,
                  color: String,
-                 size: Number,
+                 size: String,
              }
          ], 
         
